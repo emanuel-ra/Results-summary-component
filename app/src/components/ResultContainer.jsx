@@ -9,7 +9,7 @@ function ResultContainer() {
         </section>
 
         <h2 className="text-white">Great</h2>
-        <p className="text-pale-blue opacity-50">You scored higher than 65% of the people who have taken these tests.</p>
+        <p className="text-pale-blue opacity-50 text-center block lg:w-[70%]">You scored higher than 65% of the people who have taken these tests.</p>
     </section>
   )
 }

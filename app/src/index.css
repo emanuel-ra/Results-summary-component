@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
 @layer base{
   :root{
@@ -14,31 +13,63 @@
     --pale-blue: hsl(221, 100%, 96%);
     --light-lavender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%); 
+
+    --light-red-transparent: hsla(0, 100%, 67%,.1);
+    --orangey-yellow-transparent: hsla(39, 100%, 56%,.1);
+    --green-teal-transparent: hsla(166, 100%, 37%,.1);
+    --cobalt-blue-transparent: hsla(234, 85%, 45%,.1);
   }
   body{
-    @apply bg-pale-blue flex justify-center mt-10
+    @apply bg-pale-blue lg:grid lg:h-screen lg:place-items-center font-hanken-grotesk
   }
   p{
     @apply text-[18px]
   }
   h1{ @apply text-3xl font-semibold }
-  h2{ @apply text-2xl font-semibold }
+  h2{ @apply text-2xl font-semibold text-black/80 }
 }
 
 @layer components{
   .container{
-    @apply bg-white lg:flex lg:rounded-3xl
+    @apply bg-white lg:flex lg:rounded-3xl lg:shadow-lg lg:min-h-[500px]
   }
+  /* RESULTS CONTAINER  */
   .container .results{
-    @apply w-1/2 p-10 bg-gradient-to-b from-[#7857FF] to-[#2E2BE9] lg:rounded-[10%] flex  flex-col lg:items-center lg:justify-center gap-5
-  }
-  .container .summary{
-    @apply w-1/2 p-10
-  }
+    @apply w-full lg:w-1/2 p-10 bg-gradient-to-b from-[#7857FF] to-[#2E2BE9] rounded-b-[10%] lg:rounded-[10%] flex flex-col items-center justify-between gap-5
+  }  
   .results-circle{
-    @apply flex flex-col w-36 h-36 justify-center text-center rounded-full bg-gradient-to-b from-[#2E2BE9] to-[#7857FF]
+    @apply flex flex-col w-36 h-36 lg:w-1/2 lg:h-44 justify-center text-center rounded-full bg-gradient-to-b from-[#2E2BE9] to-[#7857FF]
   }
   .final-score{
     @apply text-4xl font-bold
   }
+  /* RESULTS CONTAINER  */
+
+  /* CATEGORIES CONTAINER  */
+  .container .summary{
+    @apply lg:w-1/2 p-10 lg:flex lg:flex-col justify-between
+  }
+  .container .summary button{
+    @apply w-full rounded-full p-4 text-lg font-bold text-white bg-[var(--dark-gray-blue)] hover:bg-gradient-to-b from-[#2E2BE9] to-[#7857FF] mt-5 lg:mt-0
+  }
+  .container .summary .category-score{
+    @apply w-full lg:flex lg:justify-between px-2 py-3 rounded-lg
+  }
+  .container .summary .category-score.category-reaction{
+    @apply bg-[var(--light-red-transparent)]
+  }
+  .container .summary .category-score.category-reaction .title{ @apply text-[var(--light-red)] font-bold }
+
+  .container .summary .category-score.category-memory{ @apply bg-[var(--orangey-yellow-transparent)] }
+  .container .summary .category-score.category-memory .title{ @apply text-[var(--orangey-yellow)] font-bold }
+
+  .container .summary .category-score.category-verbal{ @apply bg-[var(--green-teal-transparent)] }
+  .container .summary .category-score.category-verbal .title{ @apply text-[var(--green-teal)] font-bold }
+
+  .container .summary .category-score.category-visual{ @apply bg-[var(--cobalt-blue-transparent)] }
+  .container .summary .category-score.category-visual .title{ @apply text-[var(--cobalt-blue)] font-bold }
+
+  .text-one-hundred{ @apply text-slate-600/50 }
+   /* CATEGORIES CONTAINER  */
+  
 }
