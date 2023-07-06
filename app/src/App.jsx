@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import ResultContainer from "./components/ResultContainer"
 import SummaryContainer from "./components/SummaryContainer"
 
@@ -8,6 +9,7 @@ function App() {
         <ResultContainer />
         <SummaryContainer />
       </main>
+      <Footer />
     </>
   )
 }

@@ -31,7 +31,7 @@
 
 @layer components{
   .container{
-    @apply bg-white lg:flex lg:rounded-3xl lg:shadow-lg lg:min-h-[500px]
+    @apply bg-white lg:flex lg:rounded-3xl lg:shadow-lg lg:min-h-[500px] 
   }
   /* RESULTS CONTAINER  */
   .container .results{
