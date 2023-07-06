@@ -31,14 +31,14 @@
 
 @layer components{
   .container{
-    @apply bg-white lg:flex lg:rounded-3xl lg:shadow-lg lg:min-h-[500px] 
+    @apply bg-white lg:flex lg:rounded-3xl lg:shadow-lg lg:min-h-[500px] lg:w-[700px]
   }
   /* RESULTS CONTAINER  */
   .container .results{
-    @apply w-full lg:w-1/2 p-10 bg-gradient-to-b from-[#7857FF] to-[#2E2BE9] rounded-b-[10%] lg:rounded-[10%] flex flex-col items-center justify-between gap-5
+    @apply w-full lg:w-1/2 p-10 bg-gradient-to-b from-[#7857FF] to-[#2E2BE9] rounded-b-3xl lg:rounded-3xl flex flex-col items-center justify-between gap-5
   }  
   .results-circle{
-    @apply flex flex-col w-36 h-36 lg:w-1/2 lg:h-44 justify-center text-center rounded-full bg-gradient-to-b from-[#2E2BE9] to-[#7857FF]
+    @apply flex flex-col w-36 h-36 justify-center text-center rounded-full bg-gradient-to-b from-[#2E2BE9] to-[#7857FF]
   }
   .final-score{
     @apply text-4xl font-bold
@@ -47,13 +47,13 @@
 
   /* CATEGORIES CONTAINER  */
   .container .summary{
-    @apply lg:w-1/2 p-10 lg:flex lg:flex-col justify-between
+    @apply lg:w-1/2 p-10 flex flex-col justify-between gap-4 lg:gap-0
   }
   .container .summary button{
     @apply w-full rounded-full p-4 text-lg font-bold text-white bg-[var(--dark-gray-blue)] hover:bg-gradient-to-b from-[#2E2BE9] to-[#7857FF] mt-5 lg:mt-0
   }
   .container .summary .category-score{
-    @apply w-full lg:flex lg:justify-between px-2 py-3 rounded-lg
+    @apply w-full flex justify-between px-2 py-3 rounded-lg
   }
   .container .summary .category-score.category-reaction{
     @apply bg-[var(--light-red-transparent)]
@@ -71,5 +71,10 @@
 
   .text-one-hundred{ @apply text-slate-600/50 }
    /* CATEGORIES CONTAINER  */
-  
+  .challengeby{
+    @apply text-[var(--cobalt-blue)] font-semibold
+  }
+  .bodedby{
+    @apply text-[var(--cobalt-blue)] font-semibold
+  }
 }
